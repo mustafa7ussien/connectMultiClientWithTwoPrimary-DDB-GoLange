@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>Resturant</title>
+    <!-- font link -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Almarai:wght@400;700&display=swap" rel="stylesheet" />
+    <!-- style links -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/utility.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+
+    <script>
+        function dd() {
+            document.getElementById("dd").style.display = "block";
+        }
+        function validateForm2() {
+            var x11 = document.forms["myForm2"]["cust_Namee"].value;
+            if ((x11 == "" || x1 == null)) {
+                alert(" cust name its  Required");
+                return false;
+            }
+        }
+
+        function validateForm() {
+            var x1 = document.forms["myForm"]["order_id"].value;
+            var x2 = document.forms["myForm"]["cust_name"].value;
+            var x3 = document.forms["myForm"]["phone"].value;
+            var x4 = document.forms["myForm"]["address"].value;
+            var x5 = document.forms["myForm"]["total_price"].value;
+            var x6 = document.forms["myForm"]["ate"].value;
+
+            if ((x1 == "" || x1 == null) ||
+                (x2 == "" || x2 == null) ||
+                (x3 == "" || x3 == null) ||
+                (x4 == "" || x4 == null) ||
+                (x5 == "" || x5 == null) ||
+                (x6 == "" || x6 == null)) {
+                alert(" mustFull All input, its  Required");
+                return false;
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <!-- start header section -->
+    <header>
+        <div class="container">
+            <div class="log">
+                <!-- <i class="fa fa-solid fa-utensils"></i> -->
+                <a style="color: rgb(61, 163, 75);" href="/index.html">Resturant</a>
+            </div>
+            <nav>
+                <button id="open-nav">
+                    <i class="fa fa-solid fa-bars"></i>
+                </button>
+                <ul class="nav-links">
+                    <button id="close-nav">
+                        <i class="fa fa-solid fa-xmark"></i>
+                    </button>
+                    <li><a href="#main">Main</a></li>
+                    <li><a href="#advantage">Advantages</a></li>
+                    <li><a href="#menue">food menu</a></li>
+                    <li><a href="#cta">Reserve your seat </a></li>
+                    <li><a href="#serv">services</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- end header section -->
+    <!-- start landing page -->
+    <section style=" background: url('css/images/reservation.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 55vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    padding-bottom: 30px;
+    " class="landing" id="main">
+        <div class="container">
+            <div class="content">
+                <h1>The most delicious meals </h1>
+                <span>Healthy food</span>
+                <p>
+                    Receive orders on your restaurant website
+                </p>
+                <a href="#menue" class="btn">Food Menu</a>
+            </div>
+            <figure>
+                <img src="css/images/dish1.png" alt="dish" />
+            </figure>
+        </div>
+    </section>
+    <!-- end landing page -->
+    <!-- start advantage section -->
+    <section class="advantage" id="advantage">
+        <div class="container">
+            <div class="heading">
+                <h2>Why is the restaurant the best?</h2>
+            </div>
+            <div class="advantage__container">
+                <div class="box">
+                    <img src="css/icons/adv-1-icon.svg" />
+                    <h3>Healthy food</h3>
+                    <p>
+                        Healthy food
+                    </p>
+                </div>
+                <div class="box">
+                    <img src="css/icons/adv-2-icon.svg" />
+                    <h3>special recipes</h3>
+                    <p>
+                        special recipes
+                    </p>
+                </div>
+                <div class="box">
+                    <img src="css/icons/adv-3-icon.svg" />
+                    <h3>Exclusive Offers</h3>
+                    <p>
+                        Exclusive Offers
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end advantage section -->
+    <!-- start menue section -->
+    <section class="menue" id="menue">
+        <div class="container">
+            <div class="head">
+                <h2>Food Menu</h2>
+                <ul class="selection">
+                    <li class="select active" data-categroy=".all">all meals</li>
+                    <!-- <li class=" select" data-categroy=".breakfast">the breakfast</li>
+                    <li class=" select" data-categroy=".launch">the lunch</li> -->
+                    <li class="select" data-categroy=".dinner">all meals</li>
+                </ul>
+            </div>
+            <div class="content" id="menue-choice">
+                <!-- <div class="box dinner all">
+                    <figure>
+                        <img src="css/images/menu-1.png" alt="menue" />
+                    </figure>
+                    <div class="text">
+                        <h4>nutrition bowl high res</h4>
+                        <div class="size">
+                            <span>3</span>
+                            <span>110$</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- <div class="box all breakfast">
+                    <figure>
+                        <img src="css/images/menu-2.png" alt="menue" />
+                    </figure>
+                    <div class="text">
+                        <h4>the name of the meal</h4>
+                        <div class="size">
+                            <span>120gr</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="box all launch">
+                    <figure>
+                        <img src="css/images/menu-3.png" alt="menue" />
+                    </figure>
+                    <div class="text">
+                        <h4>the name of the meal</h4>
+                        <div class="size">
+                            <span>120gr</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="box all launch">
+                    <figure>
+                        <img src="css/images/menu-4.png" alt="menue" />
+                    </figure>
+                    <div class="text">
+                        <h4>the name of the meal</h4>
+                        <div class="size">
+                            <span>120gr</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="box all breakfast">
+                    <figure>
+                        <img src="css/images/menu-5.png" alt="menue" />
+                    </figure>
+                    <div class="text">
+                        <h4>the name of the meal</h4>
+                        <div class="size">
+                            <span>120gr</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="box all launch">
+                    <figure>
+                        <img src="css/images/menu-6.png" alt="menue" />
+                    </figure>
+                    <div class="text">
+                        <h4>the name of the meal</h4>
+                        <div class="size">
+                            <span>120gr</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- <div class="box all dinner">
+                    <figure>
+                        <img src="css/images/menu-7.png" alt="menue" />
+                    </figure>
+                    <div class="text">
+                        <h4>Clam chowder Dish</h4>
+                        <div class="size">
+                            <span>1</span>
+                            <span>150$</span>
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+                    </div>
+                </div> -->
+                {{range .Items}} 
+                <div class="box all dinner">
+                    <figure>
+                        <img src="css/images/menu-8.png" alt="menue" />
+                    </figure>
+                    <div class="text">
+                        <h4>{{.Name}}</h4>
+                        <div class="size">
+                            <span>{{.Item_id}}</span>
+                            <span>{{.Price}}</span>
+                            <!-- <i class="fa-solid fa-plus"></i> -->
+                        </div>
+                    </div>
+                </div>
+                {{end}}
+                
+
+
+            </div>
+        </div>
+    </section>
+    <!-- end menue section -->
+    <!-- start book section -->
+    <section class="cta" id="cta">
+        <div class="info">
+            <h2>Reserve your Orders</h2>
+            <form name="myForm" action="/addorder" onsubmit="return validateForm()" method="POST" required>
+                <div class="form-contaienr">
+                    <div style="margin-left: 10%;" class="form-groub">
+                        <label for="date"> order_id</label>
+                        <input type="number" id="number" name="order_id" />
+                    </div>
+                    <div style="margin-left: 10%;" class="form-groub">
+                        <label for="date">cust_name</label>
+                        <input type="text" id="number" name="cust_name" />
+                    </div>
+
+                    <div style="margin-left: 10%;" class="form-groub">
+                        <label for="date">phone</label>
+                        <input type="number" id="number" name="phone" />
+                    </div>
+                    <div style="margin-left: 10%;" class="form-groub">
+                        <label for="date">address</label>
+                        <input type="text" id="Address" name="address" />
+                    </div>
+                    <div style="margin-left: 10%;" class="form-groub">
+                        <label for="date">total_price</label>
+                        <input type="number" id="Address" name="total_price" />
+                    </div>
+                    <div style="margin-left: 100%;"></div>
+                    <div style="margin-left: 10%;" class="form-groub">
+                        <label for="date">Date</label>
+                        <input type="date" id="date" name="Date" />
+                    </div>
+
+
+                    <div></div>
+
+
+                </div>
+                <input type="submit" class="btn" value="Submit" />
+            </form>
+        </div>
+    </section>
+    <!-- end book section -->
+
+    <!-- start contact section -->
+    <!-- <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-container">
+                <h2>services</h2>
+                <div class="box">
+                    <a href="#" class="btn">Show orders</a> 
+                    <a href="#" class="btn">cancel orders</a>  
+                </div>
+                
+            </div>
+        </div>
+    </section> -->
+    <!-- /// -->
+    <section class="menue" id="serv">
+        <div class="container">
+            <div class="head">
+                <h2>Services</h2>
+                <ul class="selection">
+                    <li class=" select"  data-categroy=".launch" onclick="return dd()">Show All Orders</li>
+                    <li onclick="return dd()" class="select" data-categroy=".dinner">Cancle Orders</li>
+                </ul>
+            </div>
+            <div id="dd" style="display: none;" class="content" id="menue-choice">
+
+
+                <div style="background-color: rgb(61 102 59);" class="box launch all">
+                    <figure>
+                        <!-- <img src="css/images/menu-3.png" alt="menue" /> -->
+                    </figure>
+                    <div class="text">
+                        <h4> Orders</h4>
+                        <div class="size">
+                            <span>Order id</span>
+                            <span>Customer name</span>
+                            <span>Phone</span>
+                            <span>Address</span>
+                            <span>Total Price</span>
+                            <span>Date</span>
+                            <!-- <i class="fa-solid fa-plus"></i> -->
+                        </div>
+                        {{range .Orders}} 
+                        <div class="size">
+                            <span>{{.Order_id}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                            <span>{{.Cust_name}}</span>
+                            <span>{{.Phone}}</span>
+                            <span>{{.Address}}</span>
+                            <span>{{.Total_price}}</span>
+                            <span>{{.Date}}</span>
+                            <!-- <i class="fa-solid fa-plus"></i> -->
+                        </div>
+                        {{end}}
+                    </div>
+                </div>
+                <div class="box dinner all">
+                    <section class="cta" id="cta">
+                        <div class="info">
+                            <h2>cancle order</h2>
+                            <form name="myForm2" action="/deleteGust" onsubmit=" return validateForm2()" method="POST"
+                                required>
+                                <div class="form-contaienr">
+
+                                    <div style="margin-left: 10%;" class="form-groub">
+                                        <label for="date">cust id</label>
+                                        <input style=" text-transform: lowercase;" type="number" id="number" name="itemnum" />
+                                    </div>
+
+                                </div>
+                                <input type="submit" class="btn" value="Cancle" />
+                            </form>
+                        </div>
+                    </section>
+
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- // -->
+
+    <!-- end contact section -->
+    <!-- start footer section -->
+    <footer>
+        <div class="container">
+            <div class="footer-nav">
+                <div class="col">
+                    <div class="log">
+
+                        <a style="color: #A2DE96;" href="/index.html">Restaurant</a>
+                        <!-- <i class="fa-solid fa-utensils"></i> -->
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <div class="social-link">
+                            <!-- <i class="fa-brands fa-facebook-f" style="color: #1877f2"></i>
+                            <i class="fa-brands fa-instagram" style="color: #c13584"></i>
+                            <i class="fa-brands fa-twitter" style="color: #1da1f2"></i> -->
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col">
+                    <h3>Services</h3>
+                    <ul class="links">
+                        <li><a href="#"> table reservation </a></li>
+                        <li><a href="#"> customers service </a></li>
+                        <li><a href="#"> Products </a></li>
+                        <li><a href="#"> food menu </a></li>
+                    </ul>
+                </div>
+
+                <div class="col">
+                    <h3>company</h3>
+                    <ul class="links">
+                        <li><a href="#"> Jobs </a></li>
+                        <li><a href="#"> Quality Certificates</a></li>
+                        <li><a href="#"> social sharing </a></li>
+                        <li><a href="#"> About company </a></li>
+                    </ul>
+                </div>
+
+                <div class="col">
+                    <h3>links</h3>
+                    <ul class="links">
+                        <li><a href="#"> Connect with us </a></li>
+                        <li><a href="#"> privacy policy </a></li>
+                        <li><a href="#"> Usage Policy </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-text">
+            <p>
+                <a style="color:rgb(61, 163, 75) ;" href="https://mustafahussien-portfolio.netlify.app/"
+                    target="_blank"> Visitr website. </a>
+                made by Mostafa Hussien
+            </p>
+        </div>
+    </footer>
+    <!-- end footer section -->
+    <!-- javaSCript links -->
+    <script src="css/js/main.js"></script>
+</body>
+
+</html>

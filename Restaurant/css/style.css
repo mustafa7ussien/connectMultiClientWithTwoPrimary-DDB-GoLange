@@ -1,0 +1,423 @@
+/* start header section */
+header {
+    box-shadow: 0 0 10px #e6e9e9;
+    padding: 6px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    background-color: #fff;
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .log {
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+header .log a {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: black;
+}
+header .log i {
+    font-size: 1.7rem;
+    margin-left: 9px;
+    color: var(--primary);
+}
+header nav > button,
+.nav-links > button {
+    background-color: transparent;
+    border: none;
+}
+header nav > #open-nav {
+    display: block;
+    cursor: pointer;
+    font-size:21px;
+}
+header nav .nav-links {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: var(--primary);
+    width: 300px;
+    max-width: 100%;
+    min-height: 100vh;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    padding: 30px;
+}
+header nav .clopssing {
+    transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
+}
+header nav ul #close-nav {
+    border-radius: 4px;
+    display: block;
+    width: fit-content;
+    background-color: #fff;
+    padding: 7px 10px;
+    margin-right: auto;
+    color: #6e6a6a;
+    cursor: pointer;
+}
+header nav ul li {
+    margin: 23% 0;
+}
+header nav ul li a {
+    color: #6e6a6a;
+}
+header nav ul li a.active {
+    color: #fff;
+}
+
+/* end header section */
+/* start landing page */
+.landing {
+    background: url('css/images/reservation.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 55vh;
+    position: relative;
+    overflow: hidden;
+}
+.landing {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    padding-bottom: 30px;
+}
+.landing .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.landing .container .content {
+    flex-basis: 45%;
+}
+.landing .container .content span {
+    display: block;
+    color: var(--primary);
+    font-weight: bold;
+    font-size: 20px;
+}
+.landing .container .content h1,
+.landing .container .content p
+{
+    color: var(--primary);
+}
+.landing .container .content p {
+    font-size: 14px;
+    margin-bottom: 2.5rem;
+    padding: 10px 0 10px 20px;
+}
+.landing .container .content a {
+    background-color: var(--primary);
+    color: var(--textDark);
+}
+.landing .container figure {
+    flex-basis: 30%;
+}
+.landing .container figure img {
+    width: 100%;
+}
+/* end landing page */
+/* start advantage section */
+.advantage {
+    background-color: var(--bglight);
+}
+.advantage .heading {
+    text-align: center;
+    margin: 0 auto 4.5rem;
+}
+.advantage .advantage__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+}
+.advantage .advantage__container .box {
+    text-align: center;
+    padding: 20px;
+    border-radius: 3px;
+    transition: var(--transition);
+}
+.advantage .advantage__container .box img {
+    height: 4rem;
+}
+.advantage .advantage__container .box h3 {
+    margin: 16px auto;
+}
+.advantage .advantage__container .box p {
+    color: var(--textlight);
+    padding: 2px 20px;
+}
+.advantage .advantage__container .box:hover {
+    box-shadow: 1px 1px 13px rgb(0 0 0 / 10%);
+    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+}
+/* end advantage section */
+/* start menue section */
+.menue .container .head {
+    margin: 0 auto 4rem;
+}
+.menue .container .head h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.menue .container .head ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+.menue .container .head ul li {
+    margin-left: 19px;
+    background-color: #e8e9e7;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    min-width: 100px;
+    margin-bottom: 17px;
+}
+.menue .container .head ul li.active {
+    background-color: var(--primary);
+    color: #fff;
+}
+.menue .container .content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 40px;
+}
+.menue .container .content .box {
+    box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+    border-radius: 6px;
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+.menue .container .content .box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+}
+.menue .container .content .box figure {
+    position: relative;
+    overflow: hidden;
+}
+.menue .container .content .box figure::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    opacity: 0;
+    background-color: rgb(255 255 255 / 20%);
+    z-index: 2;
+}
+.menue .container .content .box figure:hover::after {
+    animation: flash 0.7s;
+}
+.menue .container .content .box img {
+    width: 100%;
+}
+
+.menue .container .content .box .text {
+    padding: 20px 9px;
+}
+.menue .container .content .box .text h4 {
+    color: var(--textDark);
+    margin-bottom: 18px;
+}
+.menue .container .content .box .text .size {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menue .container .content .box .text .size span {
+    color: var(--primary);
+    font-size: 17px;
+}
+.menue .container .content .box .text .size i {
+    color: #fff;
+    background-color: var(--primary);
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+/* end menue section */
+/* start book section */
+.cta {
+    background: url("../css/images/reservation.png") no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 96vh;
+    position: relative;
+    overflow: hidden;
+}
+.cta::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 70%);
+}
+.cta .info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #a2de964f;
+    z-index: 5;
+    padding: 50px 20px;
+    width: 500px;
+    max-width: 100%;
+    text-align: center;
+    color: #fff;
+    border-radius: 5px;
+}
+.cta .info h2 {
+    margin: 0 auto 35px;
+}
+.cta .info .form-contaienr {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 31px;
+}
+.cta .info form .form-groub {
+    display: flex;
+    flex-direction: column;
+}
+.cta .info form .form-groub label {
+    margin-bottom: 11px;
+    text-align: center;
+}
+.cta .info form .form-groub input,
+.cta .info form .form-groub select {
+    background-color: transparent;
+    outline: none;
+    border: 1px dashed #fff;
+    padding: 4px 6px;
+    color: #fff !important;
+    font-size: 14px;
+    border-radius: 4px;
+    width: fit-content;
+    display: block;
+}
+.cta .info form .form-groub select option {
+    color: var(--textDark);
+}
+.cta .info form input[type="submit"] {
+    background-color: #fff;
+    margin: 4px auto;
+}
+.cta .info form input[type="submit"]:hover {
+    color: #000;
+}
+/* end book section */
+
+/* start contact section */
+.contact .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contact .contact-container {
+    width: 600px;
+    max-width: 100%;
+    background-color: var(--bglight);
+    padding: 26px 20px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+}
+.contact h2 {
+    margin-bottom: 22px;
+}
+.contact .box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.contact .box p {
+    width: 400px;
+    max-width: 100%;
+    color: var(--textlight);
+    line-height: 1.7;
+}
+.contact .box a {
+    background-color: var(--primary);
+    color: #000;
+}
+/* end contact section */
+/* start footer section */
+footer {
+    padding-top: var(--section-padding);
+}
+footer .footer-nav {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+footer .footer-nav .log {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+footer .footer-nav .log > i {
+    font-size: 1.7rem;
+    color: var(--primary);
+    margin-left: 14px;
+}
+footer .footer-nav .log a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000;
+}
+footer .footer-nav .social-link i {
+    font-size: 21px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+footer .footer-nav h3 {
+    margin-bottom: 25px;
+}
+footer .footer-nav .links {
+    padding-right: 0;
+}
+footer .footer-nav .links li {
+    margin-bottom: 9px;
+}
+footer .footer-nav .links li a {
+    color: var(--textlight);
+}
+footer .footer-text {
+    background-color: var(--bglight);
+    padding: 18px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer .footer-text p,
+footer .footer-text p a {
+    color: var(--textlight);
+}
+/* end footer section */
